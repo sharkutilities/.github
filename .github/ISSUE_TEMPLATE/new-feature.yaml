@@ -1,0 +1,25 @@
+name: ✨ New Feature/Enhancement
+description: Report a New Feature/Enhancement for the Project
+title: "[New Feature/Enhancement]: "
+labels: ["enhancement"] # todo: `triage`
+
+body:
+  # provide brief description about the project, and the issue template.
+  # each specific section/topics start with `- type: <>` parameter
+  - type: markdown
+    attributes:
+      # not the markdown/attributes/value section displayes the command as is, i.e.
+      # if the contents are written in next line, the same will be displayed in the issue form.
+      # this, some lines in this section may be too long (i.e. line length > 128 charecter convention)
+      value: |
+        🌟 Thank you for taking your time ⌛ to create an awesome new feature or enhance and existing feature for the project!
+        Please describe ✍ the new feature and/or enhancement, tentative usages.
+
+    - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true

@@ -1,0 +1,89 @@
+name: 🐛 Bug Report
+description: Report a Bug on the Project
+title: "[Bug]: "
+labels: ["bug"] # todo: `triage`
+
+body:
+  # provide brief description about the project, and the issue template.
+  # each specific section/topics start with `- type: <>` parameter
+  - type: markdown
+    attributes:
+      # not the markdown/attributes/value section displayes the command as is, i.e.
+      # if the contents are written in next line, the same will be displayed in the issue form.
+      # this, some lines in this section may be too long (i.e. line length > 128 charecter convention)
+      value: |
+        🌟 Thank you for taking your time ⌛ to file the 🐛 **bug report**. This template is generated using
+        [issue forms](https://docs.github.com/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository#creating-issue-forms).
+  
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details (optional)
+      description: How can we get in touch with you, if I need more information?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please elaborate the bug, and also include *steps to reproduce*, *expected behaviour* and *solutions* (if any).
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: version
+    attributes:
+      label: Python Version
+      multiple: true
+      description: The [project](https://github.com/sharkutilities) is intended for `py3`, please select the version.
+      options:
+        - "<= 3.5"
+        - 3.6
+        - 3.7
+        - 3.8
+        - 3.9 (default)
+        - ">= 3.10"
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: operating-system
+    attributes:
+      label: What type of operating system are you using?
+      multiple: true
+      options:
+        - Windows 8.1 (or below)
+        - Windows 10
+        - Windows 11
+        - Linux (debian/ubuntu/mint/etc.)
+        - Linux (RHEL/CentOS/fedora/etc.)
+        - MacOS
+        - others
+    validations:
+      required: true
+
+  - type: textarea
+    id: systemconfiguration
+    attributes:
+      label: Relevant System Configuration
+      description: Please copy paste relevant information, like [`conda`](https://www.anaconda.com/) version, system details, library details etc.
+  
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](../CODE_OF_CONDUCT.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
