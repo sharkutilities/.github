@@ -22,7 +22,6 @@ body:
       description: Please elaborate the new feature and/or enhancement required. Also, mark/suggest solutions.
       placeholder: Tell us what new feature/enhancement is required.
       value: "This could be a great new feature/enhancement!"
-      render: markdown
     validations:
       required: true
 
