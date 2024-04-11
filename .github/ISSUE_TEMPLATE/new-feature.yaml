@@ -14,6 +14,17 @@ body:
       value: |
         🌟 Thank you for taking your time ⌛ to create an awesome new feature or enhance and existing feature for the project!
         Please describe ✍ the new feature and/or enhancement, tentative usages.
+  
+  - type: textarea
+    id: new-feature
+    attributes:
+      label: What is the New Feature/Enhancement?
+      description: Please elaborate the new feature and/or enhancement required. Also, mark/suggest solutions.
+      placeholder: Tell us what new feature/enhancement is required.
+      value: "This could be a great new feature/enhancement!"
+      render: markdown
+    validations:
+      required: true
 
   - type: checkboxes
     id: terms
