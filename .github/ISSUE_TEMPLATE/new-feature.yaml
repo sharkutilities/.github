@@ -15,7 +15,7 @@ body:
         🌟 Thank you for taking your time ⌛ to create an awesome new feature or enhance and existing feature for the project!
         Please describe ✍ the new feature and/or enhancement, tentative usages.
 
-    - type: checkboxes
+  - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
